@@ -36,28 +36,29 @@
        <fieldset><legend>informacion de estudio y otros</legend>
         <label for="colores">color favorito</label>
         <input type="color" id="colores">
-        <label for="dateInsc">fecha de inscripicion</label>
-        <input type="date" id="start" name="trip-start" value="2022-08-03" min="1950-01-01" max="2100-12-31">
+        <label for="dateInsc">fecha de inscripicion y hora</label>
+        <input type="date" id="start" name="trip-start" value="2022-08-03" min="1950-01-01" max="2100-12-31"><!--date-->
+        <input type="time" id="appt" name="appt"min="0:00" max="24:00" required><!--time-->
         <br><br>
-        <label for="phone">Ingresar numero de telefono:</label>
+        <label for="phone">Ingresar numero de telefono:</label><!--tel-->
         <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
         <small>Numero:(+57)123-456-7890</small>
         <br><br>
-        <label for="week">Escoja una semana entre Enero o Diciembre:</label>
+        <label for="week">Escoja una semana entre Enero o Diciembre:</label><!--week-->
         <input type="week" name="week" id="camp-week" min="1950-W18" max="2100-W26" required>
         <br><br>
-        <label for="url">Ingrese una https:// URL:</label>
+        <label for="url">Ingrese una https:// URL:</label><!--url-->
         <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required>
         <br><br>
         <form>
             <div class="controls">        
-                <label for="id">User ID:</label>
+                <label for="id">User ID:</label><!--reset-->
                 <input type="text" id="id" name="id" />        
                 <input type="reset" value="Reset">
                 <input type="submit" value="Submit">        
             </div>
             <br>
-            <label for="ice-cream-choice">Elige un sabor de malteada:</label>
+            <label for="ice-cream-choice">Elige un sabor de malteada:</label><!--datalist-->
             <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
             <datalist id="ice-cream-flavors">
                 <option value="Chocolate">
@@ -67,9 +68,22 @@
                 <option value="Vainilla">
             </datalist>
         </form>
+        <p>Audio:</p> <!--range---->
+
+<div>
+  <input type="range" id="volume" name="volume"
+         min="0" max="100">
+  <label for="volume">Volume</label>
+</div>
+
+<div>
+  <input type="range" id="cowbell" name="cowbell" 
+         min="0" max="100" value="90" step="10">
+  <label for="cowbell">Cowbell</label>
+</div>
        </fieldset>
        <br><br>
-       <label for="story">Cuentanos tu historia:</label>
+       <label for="story">Cuentanos tu historia:</label> <!--textarea-->
        <textarea id="story" name="story" rows="5" cols="33">
         era una noche oscura y tormentosa...</textarea>
         <br><br>
@@ -89,7 +103,7 @@
        <br><br>
        <form>
         <div>
-          <label for="title">titulo de entrada:</label>
+          <label for="title">titulo de entrada:</label> <!--hiddent-->
           <input type="text" id="title" name="title" value="Halo">
         </div>
         <div>
